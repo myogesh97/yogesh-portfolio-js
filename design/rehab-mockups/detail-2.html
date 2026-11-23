@@ -1,0 +1,60 @@
+<!doctype html><html><head><link rel="stylesheet" href="base.css"><style>
+body{background:linear-gradient(135deg,#dfe7f1,#eef1f5)}
+.stage{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:34px}
+.dev{background:#101418;border-radius:26px;padding:10px;box-shadow:0 30px 60px -28px rgba(3,45,96,.55)}
+.scr{background:#f3f3f3;border-radius:17px;overflow:hidden;position:relative}
+.tab .scr{width:560px;height:410px}
+.ph .scr{width:196px;height:410px;border-radius:20px}
+.ph{border-radius:30px}
+.bar{height:38px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 14px;gap:8px}
+.bar .logo{font-size:11px}
+.case{padding:14px 16px}
+.case h3{font-size:15px;font-weight:700;margin:4px 0 2px}
+.meta{display:flex;gap:16px;margin-top:10px}
+.meta div{display:flex;flex-direction:column;gap:2px}.meta span{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:#747474}
+.cols{display:grid;grid-template-columns:1.25fr 1fr;gap:12px;padding:0 16px}
+.tl{padding:12px 14px}
+.tl h4,.box h4{font-size:11px;margin-bottom:10px}
+.ev{display:grid;grid-template-columns:16px 1fr;gap:8px;position:relative;padding-bottom:12px}
+.ev:before{content:"";position:absolute;left:7px;top:15px;bottom:0;width:1.5px;background:#dcdcdc}
+.ev:last-child:before{display:none}
+.dot{width:15px;height:15px;border-radius:50%;border:2px solid #c9c9c9;background:#fff}
+.ev.d .dot{background:var(--ok);border-color:var(--ok)}.ev.c .dot{border-color:var(--brand);box-shadow:0 0 0 3px #d8e6fe}
+.ev b{display:block;font-size:10.5px}.ev small{color:#747474;font-size:9.5px}
+.box{padding:12px 14px;margin-bottom:12px}
+.file{display:flex;align-items:center;gap:8px;padding:7px 8px;border:1px solid var(--line);border-radius:5px;margin-bottom:6px;font-size:10px}
+.file i{width:20px;height:24px;border-radius:3px;background:#eef4ff;border:1px solid #c5d6f5}
+.msgb{background:#f5f8fc;border-radius:6px;padding:8px;font-size:10px;line-height:1.45;color:#333}
+/* phone */
+.ph .bar{height:46px;padding-top:8px}
+.pc{padding:12px}
+.pc h3{font-size:13.5px;font-weight:700;margin:5px 0 8px;line-height:1.25}
+.pc .ev b{font-size:10px}
+.prog{height:5px;border-radius:3px;background:#e5e5e5;overflow:hidden;margin:10px 0 12px}.prog span{display:block;height:100%;width:55%;background:var(--brand)}
+.tabs{position:absolute;left:0;right:0;bottom:0;height:50px;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:space-around;align-items:center;font-size:9px;color:#747474;font-weight:600}
+.tabs .on{color:var(--brand)}
+.lbl{position:absolute;bottom:-26px;left:0;right:0;text-align:center;font-size:10px;font-weight:600;color:#5c6b7c;letter-spacing:.04em}
+</style></head><body><div class="stage">
+<div style="position:relative"><div class="dev tab"><div class="scr">
+<div class="bar"><div class="logo"><div class="mark">IR</div>Incident Reporting Portal</div><div class="sp"></div><div class="avatar">JD</div></div>
+<div class="case"><span class="muted">My complaints › IM-01471</span><h3>Accessibility issue at main entrance</h3><span class="chip c-rev"><i></i>In review</span>
+<div class="meta"><div><span>Submitted</span>9 Mar, 10:42</div><div><span>Category</span>Accessibility</div><div><span>Assigned team</span>Facilities</div></div></div>
+<div class="cols"><div class="card tl"><h4>Progress</h4>
+<div class="ev d"><span class="dot"></span><div><b>Complaint submitted</b><small>9 Mar · by you</small></div></div>
+<div class="ev d"><span class="dot"></span><div><b>Acknowledged</b><small>9 Mar · Case officer assigned</small></div></div>
+<div class="ev c"><span class="dot"></span><div><b>Under review</b><small>Site inspection booked for 14 Mar</small></div></div>
+<div class="ev"><span class="dot"></span><div><b>Outcome</b><small>Expected by 21 Mar</small></div></div>
+</div><div><div class="card box"><h4>Evidence (2)</h4><div class="file"><i></i>entrance-ramp.jpg</div><div class="file"><i></i>door-width.pdf</div></div>
+<div class="card box"><h4>Latest update</h4><div class="msgb">Thanks for reporting this. A site inspection is booked and we’ll update you within 2 working days.</div></div></div></div>
+</div></div><div class="lbl">TABLET · 768</div></div>
+<div style="position:relative"><div class="dev ph"><div class="scr">
+<div class="bar"><div class="mark">IR</div><b style="font-size:11px">IM-01471</b><div class="sp"></div><span style="font-size:14px">☰</span></div>
+<div class="pc"><span class="chip c-rev"><i></i>In review</span><h3>Accessibility issue at main entrance</h3><span class="muted" style="font-size:9.5px">Step 3 of 4 · Under review</span><div class="prog"><span></span></div>
+<div class="ev d"><span class="dot"></span><div><b>Submitted</b><small>9 Mar</small></div></div>
+<div class="ev d"><span class="dot"></span><div><b>Acknowledged</b><small>9 Mar</small></div></div>
+<div class="ev c"><span class="dot"></span><div><b>Under review</b><small>Inspection 14 Mar</small></div></div>
+<div class="ev"><span class="dot"></span><div><b>Outcome</b><small>By 21 Mar</small></div></div>
+<span class="btn" style="width:100%;justify-content:center;margin-top:4px;height:32px">Add information</span></div>
+<div class="tabs"><span class="on">Home</span><span>File</span><span>Track</span><span>Help</span></div>
+</div></div><div class="lbl">MOBILE · 375</div></div>
+</div></body></html>

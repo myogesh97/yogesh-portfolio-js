@@ -1,0 +1,115 @@
+/* Design tokens. Every colour, size and curve the UI uses lives here. */
+
+@property --lx {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 70%;
+}
+@property --ly {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 10%;
+}
+
+:root {
+  color-scheme: dark;
+
+  /* Environment: near-black, never flat #000 */
+  --bg: #0a0a0b;
+  --bg-raised: #0f0f11;
+  --bg-sunken: #070708;
+
+  /* Ink */
+  --text: #ededee;
+  --text-2: rgba(237, 237, 238, 0.64);
+  --text-3: rgba(237, 237, 238, 0.52); /* lowest level still passes 4.5:1 on --bg */
+  --text-faint: rgba(237, 237, 238, 0.14); /* decorative only */
+
+  /* Lines */
+  --line: rgba(255, 255, 255, 0.075);
+  --line-strong: rgba(255, 255, 255, 0.14);
+
+  /* Single restrained accent, used for status and focus details only */
+  --accent: #e6d3b3;
+  --accent-ring: rgba(230, 211, 179, 0.28);
+  --live: #9fdcb4;
+  --live-halo: rgba(159, 220, 180, 0.12);
+  --live-ring: rgba(159, 220, 180, 0.5);
+
+  /* Neutral washes: hover fills, tracks, hairline highlights. Use as rgb(var(--wash) / a). */
+  --wash: 255 255 255;
+  /* Light sources: sheens, spotlights, ambient shafts */
+  --glow: 255 255 255;
+  --glow-strength: 1;
+
+  /* Solid surfaces */
+  --surface: rgb(16 16 18);
+  --surface-ring: rgba(16, 16, 18, 0.9);
+  --panel-bg: rgba(16, 16, 18, 0.82);
+  --rail-bg: rgba(16, 16, 18, 0.88);
+  --scrim: rgba(6, 6, 7, 0.58);
+  --vignette: rgba(0, 0, 0, 0.45);
+  --ambient-top: #0c0c0e;
+  --media-from: #121214;
+  --media-to: #0c0c0d;
+  --photo-from: #151517;
+  --photo-to: #0d0d0e;
+  --photo-ink: rgba(237, 237, 238, 0.22);
+  --photo-fade: rgba(8, 8, 9, 0.45);
+  --preview-bg: #1a1a1c;
+  --preview-shadow: rgba(0, 0, 0, 0.8);
+  --name-ink: #f2f2f3;
+  --button-hover: #fff;
+  --selection: rgba(230, 211, 179, 0.28);
+  --scrollbar: rgba(255, 255, 255, 0.14);
+  --frame-line: rgba(255, 255, 255, 0.12); /* 1px border on the portrait and screenshots */
+  --shot-shadow: rgba(0, 0, 0, 0.55);
+
+  /* Portrait treatment: mutes the current photo's teal backdrop and glare.
+     Set to `none` (or delete the line) when the photo is replaced. */
+  /* --photo-filter: grayscale(1) contrast(1.05) brightness(0.95); */
+  --photo-filter: none;
+
+  /* Smoked glass material */
+  --glass-tint: rgba(24, 24, 27, 0.44);
+  --glass-sheen: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.022) 34%,
+    rgba(255, 255, 255, 0.012) 100%
+  );
+  --glass-blur: blur(30px) saturate(150%);
+  --glass-edge: inset 0 0 0 1px rgba(255, 255, 255, 0.07), inset 0 1px 0 0 rgba(255, 255, 255, 0.07),
+    0 1px 1px rgba(0, 0, 0, 0.3), 0 24px 48px -24px rgba(0, 0, 0, 0.65);
+
+  /* Type */
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --fs-display: clamp(3.5rem, 10.4vw, 11.5rem);
+  --fs-h1: clamp(2.5rem, 5.4vw, 5.25rem);
+  --fs-h2: clamp(1.75rem, 3vw, 2.75rem);
+  --fs-lead: clamp(1.375rem, 2.2vw, 2.125rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-meta: 0.8125rem;
+  --fs-eyebrow: 0.6875rem;
+
+  /* Space */
+  --gutter: clamp(16px, 2vw, 28px);
+  --card-gap: clamp(10px, 1vw, 14px);
+  --radius-card: 22px;
+  --radius-panel: 28px;
+  --radius-sm: 12px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@media (max-width: 639px) {
+  :root {
+    --radius-card: 18px;
+    --radius-panel: 0px;
+  }
+}

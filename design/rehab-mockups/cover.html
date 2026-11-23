@@ -1,0 +1,47 @@
+<!doctype html><html><head><link rel="stylesheet" href="base.css"><style>
+.wrap{display:grid;grid-template-columns:190px 1fr;height:456px}
+.side{background:#fff;border-right:1px solid var(--line);padding:18px 12px;display:flex;flex-direction:column;gap:3px}
+.side a{display:flex;align-items:center;gap:9px;height:30px;padding:0 10px;border-radius:5px;color:#444;font-weight:500}
+.side a.on{background:#eef4ff;color:var(--brand)}
+.side .ico{width:14px;height:14px;border-radius:3px;border:1.6px solid currentColor;opacity:.8}
+.side h6{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:#747474;margin:14px 10px 6px}
+main{padding:20px 24px;display:flex;flex-direction:column;gap:14px}
+.head{display:flex;align-items:flex-end;gap:12px}
+h1{font-size:19px;font-weight:700;letter-spacing:-.01em}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat{padding:12px 14px}
+.stat b{display:block;font-size:22px;font-weight:700;margin-top:4px;letter-spacing:-.02em}
+.stat .bar{height:4px;border-radius:2px;background:#eee;margin-top:9px;overflow:hidden}
+.stat .bar span{display:block;height:100%}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#5c5c5c;font-weight:600;padding:9px 14px;border-bottom:1px solid var(--line);background:#fafafa}
+td{padding:9.5px 14px;border-bottom:1px solid #f0f0f0}
+tr:last-child td{border-bottom:0}
+.id{color:var(--brand);font-weight:600}
+.tools{display:flex;gap:8px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}
+.search{flex:1;max-width:260px;height:28px;border:1px solid #c9c9c9;border-radius:5px;padding:0 10px;display:flex;align-items:center;color:#747474}
+.seg{display:flex;border:1px solid #c9c9c9;border-radius:5px;overflow:hidden}
+.seg span{padding:6px 11px;font-weight:600;color:#444;border-right:1px solid #c9c9c9}.seg span:last-child{border:0}
+.seg .on{background:#eef4ff;color:var(--brand)}
+</style></head><body>
+<div class="top"><div class="logo"><div class="mark">IR</div>Incident Reporting Portal</div><nav class="nav"><span class="on">Dashboard</span><span>My complaints</span><span>Resources</span><span>Help</span></nav><div class="sp"></div><span class="muted">Staff portal</span><div class="avatar">JD</div></div>
+<div class="wrap">
+<aside class="side"><a class="on"><span class="ico"></span>Overview</a><a><span class="ico"></span>File a complaint</a><a><span class="ico"></span>Track a complaint</a><a><span class="ico"></span>Drafts <span class="sp"></span><span class="chip c-new">2</span></a><h6>Team</h6><a><span class="ico"></span>Assigned to me</a><a><span class="ico"></span>Reports</a><a><span class="ico"></span>Settings</a></aside>
+<main>
+<div class="head"><div><div class="muted" style="margin-bottom:3px">Welcome back, Jordan</div><h1>Complaints overview</h1></div><div class="sp"></div><span class="btn">Export</span><span class="btn pri">+ File a complaint</span></div>
+<div class="stats">
+<div class="card stat"><span class="muted">Open</span><b>18</b><div class="bar"><span style="width:42%;background:#dd7a01"></span></div></div>
+<div class="card stat"><span class="muted">In review</span><b>27</b><div class="bar"><span style="width:63%;background:#1b96ff"></span></div></div>
+<div class="card stat"><span class="muted">Resolved this month</span><b>64</b><div class="bar"><span style="width:81%;background:#45c65a"></span></div></div>
+<div class="card stat"><span class="muted">Avg. time to resolve</span><b>4.2 <small style="font-size:12px;font-weight:600">days</small></b><div class="bar"><span style="width:35%;background:#9ba9b9"></span></div></div>
+</div>
+<div class="card" style="overflow:hidden">
+<div class="tools"><div class="search">Search by case number or subject</div><div class="seg"><span class="on">All</span><span>Open</span><span>In review</span><span>Resolved</span></div><div class="sp"></div><span class="muted">Showing 5 of 109</span></div>
+<table><tr><th>Case</th><th>Subject</th><th>Category</th><th>Submitted</th><th>Status</th></tr>
+<tr><td class="id">IM-01482</td><td>Unsafe walkway near loading bay</td><td>Workplace safety</td><td>12 Mar</td><td><span class="chip c-open"><i></i>Open</span></td></tr>
+<tr><td class="id">IM-01479</td><td>Delayed equipment maintenance</td><td>Facilities</td><td>11 Mar</td><td><span class="chip c-rev"><i></i>In review</span></td></tr>
+<tr><td class="id">IM-01471</td><td>Accessibility issue at main entrance</td><td>Accessibility</td><td>9 Mar</td><td><span class="chip c-rev"><i></i>In review</span></td></tr>
+<tr><td class="id">IM-01466</td><td>Incorrect roster allocation</td><td>HR &amp; staffing</td><td>8 Mar</td><td><span class="chip c-res"><i></i>Resolved</span></td></tr>
+<tr><td class="id">IM-01458</td><td>Data entry error on client record</td><td>Records</td><td>6 Mar</td><td><span class="chip c-res"><i></i>Resolved</span></td></tr>
+</table></div>
+</main></div></body></html>

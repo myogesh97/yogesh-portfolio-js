@@ -1,0 +1,189 @@
+.caption {
+  display: block;
+  font-size: var(--fs-meta);
+  line-height: 1.5;
+  color: var(--text-2);
+  max-width: 30ch;
+  text-wrap: pretty;
+}
+
+/* About */
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bigFigure {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: clamp(2.75rem, 4.4vw, 4.5rem);
+  font-weight: 450;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+}
+
+.unit {
+  font-size: var(--fs-small);
+  letter-spacing: 0;
+  color: var(--text-2);
+}
+
+/* Work */
+.work {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 14px;
+}
+
+.workHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+  color: var(--text-3);
+}
+
+.workList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
+  min-height: 0;
+}
+
+.workItem {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr auto;
+  align-items: baseline;
+  gap: 8px;
+  padding: 7px 0;
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-small);
+  color: var(--text-2);
+  transition:
+    color 0.35s var(--ease-out),
+    transform 0.5s var(--ease-out);
+}
+
+.workIndex {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-3);
+}
+
+.workName {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.workRegion {
+  font-size: var(--fs-meta);
+  color: var(--text-3);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  button:hover .workItem {
+    color: var(--text);
+    transform: translateX(4px);
+  }
+}
+
+/* Only shown when the list is cut short, below */
+.workMore {
+  display: none;
+}
+
+@media (max-height: 820px) and (min-width: 1024px) {
+  /* Keep in step with SHORT_LIST in previews.jsx */
+  .workItem:nth-child(n + 4) {
+    display: none;
+  }
+  .workMore {
+    display: block;
+    padding: 7px 0 0 2.2rem;
+    border-top: 1px solid var(--line);
+    font-size: var(--fs-meta);
+    color: var(--text-3);
+  }
+}
+
+@media (max-width: 639px) {
+  .workRegion {
+    display: none;
+  }
+  .workItem {
+    grid-template-columns: 1.8rem 1fr;
+  }
+}
+
+/* Experience */
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  height: 100%;
+}
+
+.track {
+  position: relative;
+  display: block;
+  height: 6px;
+  border-radius: 999px;
+  background: rgb(var(--wash) / 0.05);
+}
+
+.segment {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 999px;
+  background: rgb(var(--wash) / 0.34);
+  box-shadow: 0 0 0 1.5px var(--surface-ring);
+}
+
+.segment:last-child {
+  background: var(--text);
+}
+
+.years {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-3);
+}
+
+/* Contact */
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactLead {
+  font-size: clamp(1.25rem, 1.9vw, 1.75rem);
+  font-weight: 450;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  max-width: 18ch;
+}
+
+/* Resume */
+.resume {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.resumeIcon {
+  color: var(--text-3);
+}

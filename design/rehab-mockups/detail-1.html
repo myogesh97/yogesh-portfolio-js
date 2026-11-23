@@ -1,0 +1,47 @@
+<!doctype html><html><head><link rel="stylesheet" href="base.css"><style>
+body{background:#e9edf2}
+.page{display:grid;place-items:center;height:456px;padding-left:150px}
+.modal{width:620px;background:#fff;border-radius:10px;box-shadow:0 20px 50px -20px rgba(3,45,96,.35),0 0 0 1px rgba(0,0,0,.06);overflow:hidden}
+.mh{padding:11px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center}
+.mh h2{font-size:15px;font-weight:700}
+.x{width:24px;height:24px;border-radius:5px;border:1px solid #c9c9c9;display:grid;place-items:center;color:#444;font-size:12px}
+.steps{display:flex;padding:9px 20px;gap:6px;border-bottom:1px solid var(--line);background:#fafafa}
+.st{flex:1;display:flex;align-items:center;gap:7px;font-weight:600;color:#747474}
+.st .n{width:20px;height:20px;border-radius:50%;border:1.5px solid #c9c9c9;display:grid;place-items:center;font-size:10px}
+.st.done{color:var(--ok)}.st.done .n{background:var(--ok);border-color:var(--ok);color:#fff}
+.st.cur{color:var(--brand)}.st.cur .n{border-color:var(--brand);background:var(--brand);color:#fff}
+.st .ln{flex:1;height:1.5px;background:#ddd}
+.body{padding:12px 20px;display:grid;grid-template-columns:1fr 1fr;gap:9px 16px}
+.f{display:flex;flex-direction:column;gap:5px}.f.full{grid-column:1/-1}
+label{font-weight:600;font-size:10.5px}label em{color:var(--err);font-style:normal;margin-right:2px}
+.in{height:30px;border:1px solid #c9c9c9;border-radius:5px;padding:0 10px;display:flex;align-items:center;color:#181818}
+.in.ph{color:#939393}
+.in.err{border-color:var(--err);box-shadow:inset 0 0 0 1px var(--err)}
+.ta{height:44px;align-items:flex-start;padding-top:8px;line-height:1.45}
+.msg{color:var(--err);font-size:10px;display:flex;gap:5px;align-items:center}
+.msg b{width:13px;height:13px;border-radius:50%;background:var(--err);color:#fff;display:grid;place-items:center;font-size:9px}
+.hint{color:#5c5c5c;font-size:10px}
+.alert{grid-column:1/-1;display:flex;gap:9px;padding:9px 12px;border-radius:6px;background:#fef1ee;border:1px solid #f4c7bf;color:#8c1004}
+.radios{display:flex;gap:8px}
+.r{flex:1;height:30px;border:1px solid #c9c9c9;border-radius:5px;display:flex;align-items:center;gap:7px;padding:0 10px}
+.r i{width:12px;height:12px;border-radius:50%;border:1.5px solid #939393}
+.r.on{border-color:var(--brand);background:#eef4ff}.r.on i{border:4px solid var(--brand)}
+.mf{padding:9px 20px;border-top:1px solid var(--line);display:flex;gap:8px;background:#fafafa}
+.sr{position:absolute;left:22px;bottom:22px;width:200px;padding:10px 12px;border-radius:8px;background:#032d60;color:#fff;font-size:10px;line-height:1.5;box-shadow:0 10px 24px -10px rgba(0,0,0,.4)}
+.sr b{display:block;font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin-bottom:3px}
+</style></head><body>
+<div class="top"><div class="logo"><div class="mark">IR</div>Incident Reporting Portal</div><nav class="nav"><span>Dashboard</span><span class="on">My complaints</span><span>Resources</span><span>Help</span></nav><div class="sp"></div><div class="avatar">JD</div></div>
+<div class="page"><div class="modal" role="dialog">
+<div class="mh"><h2>File a complaint</h2><div class="sp"></div><span class="muted" style="margin-right:12px">Draft saved</span><div class="x">✕</div></div>
+<div class="steps"><div class="st done"><span class="n">✓</span>Details<span class="ln"></span></div><div class="st cur"><span class="n">2</span>Incident<span class="ln"></span></div><div class="st"><span class="n">3</span>Evidence<span class="ln"></span></div><div class="st"><span class="n">4</span>Review</div></div>
+<div class="body">
+<div class="alert"><b>!</b><span>2 fields need attention before you can continue: <u>Date of incident</u>, <u>Description</u>.</span></div>
+<div class="f"><label><em>*</em>Category</label><div class="in">Workplace safety ▾</div></div>
+<div class="f"><label><em>*</em>Date of incident</label><div class="in err ph">DD / MM / YYYY</div><div class="msg"><b>!</b>Enter the date the incident happened.</div></div>
+<div class="f full"><label>Was anyone injured?</label><div class="radios"><div class="r"><i></i>Yes</div><div class="r on focus"><i></i>No</div><div class="r"><i></i>Not sure</div></div></div>
+<div class="f full"><label><em>*</em>Description</label><div class="in ta err">Water pooling on the walkway beside loading bay 2 after</div><div class="msg"><b>!</b>Description must be at least 80 characters. You have 56.</div></div>
+</div>
+<div class="mf"><span class="btn">Back</span><div class="sp"></div><span class="btn">Save draft</span><span class="btn pri">Continue</span></div>
+</div></div>
+<div class="sr"><b>Screen reader</b>“Date of incident, required, invalid entry. Enter the date the incident happened. Edit text.”</div>
+</body></html>

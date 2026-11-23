@@ -1,0 +1,353 @@
+.study {
+  padding: 40px 0 clamp(40px, 6vw, 96px);
+}
+
+/* ---- Title ---- */
+
+.head {
+  max-width: 960px;
+  margin-bottom: clamp(28px, 4vw, 48px);
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.kicker > :first-child {
+  flex: none;
+  white-space: nowrap;
+}
+
+.kickerRule {
+  flex: none;
+  width: 28px;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.title {
+  font-size: var(--fs-h1);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.title:focus {
+  outline: none;
+}
+
+.title:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 6px;
+}
+
+.summary {
+  margin-top: 20px;
+  max-width: 44ch;
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--text-2);
+  text-wrap: pretty;
+}
+
+.hero {
+  margin-bottom: clamp(28px, 4vw, 48px);
+}
+
+/* ---- Facts ---- */
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.meta[data-count='3'] {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 20px 18px 0;
+}
+
+.metaItem + .metaItem {
+  padding-left: 20px;
+  border-left: 1px solid var(--line);
+}
+
+.metaItem dd {
+  font-size: var(--fs-small);
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag,
+.tagStrong {
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 7px 11px;
+  border-radius: 999px;
+}
+
+.tag {
+  color: var(--text-2);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.tagStrong {
+  color: var(--text);
+  background: rgb(var(--wash) / 0.06);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+
+/* ---- Chapters ---- */
+
+.chapters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 80px);
+  padding: clamp(48px, 7vw, 96px) 0;
+}
+
+.chapterTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: var(--fs-small);
+  font-weight: 450;
+  color: var(--text-2);
+}
+
+.chapterNo {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: var(--text-3);
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+
+.lead {
+  font-size: clamp(1.25rem, 1.8vw, 1.625rem);
+  line-height: 1.38;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  text-wrap: pretty;
+}
+
+.contribution {
+  display: flex;
+  flex-direction: column;
+}
+
+.contribution li {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: 8px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.contribution li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.itemNo {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  line-height: 2.2;
+  color: var(--text-3);
+}
+
+/* ---- Figures ---- */
+
+.figures {
+  margin-bottom: clamp(48px, 7vw, 96px);
+}
+
+.figureGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--card-gap);
+}
+
+.figureGrid[data-count='1'] {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.figureGrid[data-count='1'] .figure {
+  flex-direction: row;
+  align-items: baseline;
+  gap: 24px;
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: clamp(18px, 2vw, 28px);
+  border-radius: 16px;
+  background: rgb(var(--wash) / 0.025);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.figureValue {
+  font-size: clamp(2.5rem, 4.4vw, 4rem);
+  font-weight: 450;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  font-variant-numeric: tabular-nums;
+}
+
+.figureLabel {
+  font-size: var(--fs-small);
+  line-height: 1.45;
+  color: var(--text-2);
+}
+
+/* ---- Details ---- */
+
+.details {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: var(--card-gap);
+  align-items: end;
+}
+
+.details > :last-child {
+  margin-bottom: clamp(24px, 5vw, 72px);
+}
+
+/* ---- Next ---- */
+
+.nextWrap {
+  margin-top: clamp(56px, 8vw, 112px);
+}
+
+.next {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  padding: clamp(24px, 3vw, 40px) 0 0;
+  border-top: 1px solid var(--line-strong);
+  text-align: left;
+}
+
+.nextRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.nextTitle {
+  font-size: var(--fs-h1);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: var(--text-2);
+  transition: color 0.4s var(--ease-out);
+  text-wrap: balance;
+}
+
+.nextArrow {
+  flex: none;
+  color: var(--text-3);
+  transition:
+    transform 0.5s var(--ease-out),
+    color 0.4s var(--ease-out);
+}
+
+.nextClient {
+  font-size: var(--fs-small);
+  color: var(--text-3);
+}
+
+.next:hover .nextTitle,
+.next:focus-visible .nextTitle {
+  color: var(--text);
+}
+
+.next:hover .nextArrow,
+.next:focus-visible .nextArrow {
+  color: var(--text);
+  transform: translateX(6px);
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 1023px) {
+  .study {
+    padding-top: 28px;
+  }
+  .meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .metaItem:nth-child(3) {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .metaItem:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+  .figureGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 719px) {
+  .chapters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .details > :last-child {
+    margin-bottom: 0;
+  }
+  .tags {
+    flex-direction: column;
+  }
+  .figureGrid[data-count='1'] .figure {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
